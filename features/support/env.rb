@@ -41,7 +41,9 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
-Capybara.default_driver = ENV['SELENIUM'] ? :selenium_chrome : :webkit
+<<<<<<< HEAD
+require 'capybara/poltergeist'
+Capybara.default_driver = ENV['SELENIUM'] ? :selenium_chrome : :poltergeist
 
 Capybara.register_driver :selenium_chrome do |app|
   require 'selenium-webdriver'
